@@ -15,7 +15,7 @@ const CollectionItem = ({ item, addItem }) => {
       </div>
       <CustomButton onClick={() => addItem(item)} inverted>
         {" "}
-        Add Items{" "}
+        Add Item{" "}
       </CustomButton>
     </div>
   );
