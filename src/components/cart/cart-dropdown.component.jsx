@@ -10,7 +10,7 @@ import { withRouter } from "react-router-dom";
 
 import "./cart-dropdown.styles.scss";
 
-const CartDropdown = ({ cartItems }) => (
+const CartDropdown = ({ cartItems, history }) => (
   <div className="cart-dropdown">
     <div className="cart-items">
       {cartItems.length ? (
@@ -20,7 +20,9 @@ const CartDropdown = ({ cartItems }) => (
       ) : (
         <span className="empty-message">Your Cart Is Empty</span>
       )}
-      <CustomButton>CHECKOUT </CustomButton>
+      <CustomButton onClick={() => history.push("./checkout")}>
+        CHECKOUT{" "}
+      </CustomButton>
     </div>
   </div>
 );
